@@ -4,8 +4,6 @@ const file = './db/data.json';
 
 const saveDB = ( data ) => {
 
-    // console.log(data);
-
     fs.writeFileSync( file, JSON.stringify(data) );
 }
 
@@ -16,7 +14,6 @@ const readDB = () => {
 
     const info = fs.readFileSync( file, { encoding: 'utf-8' });
     const data = JSON.parse( info );
-    // console.log(data);
 
     return data;
 }
